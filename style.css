@@ -270,19 +270,7 @@ p {
     display: contents;
 }
 
-.card-contact {
-    background-color: #FFF;
-    margin: 1.125em 13em;
-    position: relative;
-    max-width: 350px;
-    transition: transform .15s ease-out;
-    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.2);
-}
 
-.card-contact:hover {
-    transform: scale(1.01);
- 
-}
 
 img.icon-mail, img.icon-phone  {
     display: block;
