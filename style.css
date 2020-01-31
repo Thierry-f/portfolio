@@ -1,0 +1,326 @@
+/* Réinitilisation du CSS par defaut sur les navigateurs */
+
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS du bady */
+
+body {
+    /* font-family: la police d'écriture du corp de mon site */
+    font-family: 'Viga', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /*
+    Margin
+    margin : 10px; -> HAUT / DROITE / BAS / GAUCHE
+    margin: 10px 20px; -> HAUT-BAS : 10px GAUCHE-DROITE : 20px
+    */
+    padding: 20px 30px;
+}
+
+ul {
+    /*liste non pas de style*/
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+}
+
+li a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+li a:hover:after {
+    width: 90%;
+    background: #444;
+}
+
+
+/** Header */
+
+.user {
+    justify-content: flex-end;
+}
+
+.menu {
+    padding-top: 1.2em;
+    align-content: flex-end;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+header nav ul li a {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/** Accueil  */
+
+#accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(10, 10, 12, 0.507)), url("./images/bg.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#accueil h1 {
+    color : #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 5em;
+}
+
+#accueil h2 {
+    color: #FFF;
+}
+
+.primary {
+    background-color: #FFF; /* Green */
+    border-radius: 10px;
+    border: none;
+    color: #444;
+    margin-top: 20px;
+    padding: 20px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.primary:hover {
+    background-color: #444; /* Green */
+    border: none;
+    color: #FFF;
+    margin-top: 40px;
+    padding: 20px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* EXPERIENCE */	
+
+#experiences {	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}	
+
+#experiences h1 {
+    font-size: 3em;
+    margin: 30px 0px;
+}
+
+.exp-pro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+}	
+
+/*
+.exp-perso {	
+    background-color: #DDD;	
+}	 */
+
+
+/**************/ 
+
+.card {
+    background-color: #FFF;
+
+    margin: 1.125em 2em;
+    position: relative;
+    max-width: 360px;
+    transition: transform .15s ease-out;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.01);
+ 
+}
+
+.card--blurry {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+figure {
+    background: white;
+
+    margin: 0;
+}
+
+.text-wrap {
+    padding: 9%;
+    text-align: center;
+    margin-top: -3em;
+    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    color: #848484;
+}
+
+/* Compétences */
+
+#competences {
+    margin-top: 20px;
+    background-color: #444;
+    color: #FFF;
+}
+
+#competences h1 {
+    font-size: 3em;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-skill {
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+
+/* Contact */
+
+#contact {
+    margin: 20px 0px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact h1 {
+    font-size: 3em;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 15px;
+    border-color: whitesmoke;
+
+}
+
+.icon-phone, .icon-mail {
+    display: contents;
+}
+
+.card-contact {
+    background-color: #FFF;
+    margin: 1.125em 13em;
+    position: relative;
+    max-width: 350px;
+    transition: transform .15s ease-out;
+    box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-contact:hover {
+    transform: scale(1.01);
+ 
+}
+
+img.icon-mail, img.icon-phone  {
+    display: block;
+    max-width: 35%;
+}
+
+.a-phone {
+    margin-right: 0px;
+}
+
+.a-mail {
+    margin-right: -20px;
+}
+
+#scrollUp {
+    position: fixed;
+    bottom : 10px;
+    right: -100px;
+    opacity: 0.5;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+ 
+}
+
+.icon {
+    font-size: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
